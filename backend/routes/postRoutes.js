@@ -16,5 +16,6 @@ const documentController = require('../controllers/documentController')
  const upload = multer({storage})
 
 router.route('/').post(upload.single('document') ,documentController.uploadDocument).get(documentController.getAll)
+router.route('/:id').delete(documentController.deleteOne);
 
 module.exports = router;

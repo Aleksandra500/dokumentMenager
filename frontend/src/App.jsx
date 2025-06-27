@@ -8,6 +8,7 @@ function App() {
 	const [activeComponent, setActiveComponent] = useState('upload');
 	return (
 		<div className='app-container'>
+			<ToastContainer />
 			<div className='nav-buttons'>
 				<button onClick={() => setActiveComponent('upload')}>
 					📤 Upload Dokumenta
