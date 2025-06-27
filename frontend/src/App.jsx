@@ -1,14 +1,13 @@
-
-import './App.css'
+import './App.css';
+import UploadForm from './components/uploadForm/UploadForm';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
-
-
-  return (
-    <>
-     <h2>App</h2>
-    </>
-  )
+	return (
+		<>
+			<UploadForm />
+		</>
+	);
 }
 
-export default App
+export default App;
