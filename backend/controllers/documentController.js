@@ -28,3 +28,22 @@ exports.uploadDocument = (req, res) => {
 		});
 	});
 };
+
+exports.getAll = (req, res) => {
+	
+	const sql = 'SELECT * FROM dokuments'
+
+	db.query(sql, (err, result) => {
+		if(err){
+			return  res.status(500).json({
+				status: err,
+				message: 'Greska iz servisa'
+			})
+		}
+		return res.status(200).json({
+			status: 'success',
+			message: 'Izlistana je lista dokumenata',
+			result: result
+		})
+	})
+}

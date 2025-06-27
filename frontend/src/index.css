@@ -56,7 +56,6 @@ button:focus-visible {
   outline: 3px solid #a5d6a7;
 }
 
-/* ✅ Jasniji textarea i input */
 input[type='text'],
 input[type='file'],
 textarea {
@@ -65,4 +64,4 @@ textarea {
   border: 1px solid #ccc;
 }
 
-/* 💡 Ako koristiš Tailwind, možeš sve ovo i tamo definisati */
+

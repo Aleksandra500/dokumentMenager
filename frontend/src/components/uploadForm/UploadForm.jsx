@@ -49,7 +49,7 @@ function UploadForm() {
 return (
   <div className="upload-container">
     <h2>Upload file</h2>
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} encType='multipart?form-data'>
       <div >
         <label>Naslov: </label>
         <input type='text' value={title} onChange={(e) => setTitle(e.target.value)} required />
