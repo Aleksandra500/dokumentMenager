@@ -4,6 +4,7 @@ const app = express();
 const db = require('./db');
 const path = require('path');
 const postRoutes = require('./routes/postRoutes');
+const downloadRoute = require('./routes/downloadRoute')
 
 require('dotenv').config();
 
@@ -14,6 +15,7 @@ app.use(cors());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.use('/api/post', postRoutes);
+app.use('/api/download', downloadRoute )
 
 app.listen(process.env.PORT, () => {
 	console.log(`connected on ${process.env.PORT} port 👍🏼`);
